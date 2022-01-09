@@ -1,0 +1,20 @@
+{% extends "base.html" %} 
+{% load static %}
+
+{% block title %} 
+My post detail page
+{% endblock %} 
+
+{% block style %}
+  <link rel="stylesheet" href="{% static "blog/post-detail.css" %}" />
+{% endblock %}
+
+{% block main_content %}
+
+
+<h1> {{post.title}} </h1>
+<h3> {{ post.content }} </h3>
+
+<img src="{% static "blog/images/"|add:post.image %}"  alt = {{post.title}} />
+
+{% endblock %}
